@@ -1,0 +1,71 @@
+.containerModal {
+  @apply w-full h-full fixed left-0 top-0 bg-black bg-opacity-50 flex items-center justify-center;
+}
+
+.hide {
+  @apply invisible;
+}
+.show {
+  @apply visible;
+}
+
+.modal {
+  @apply dark:bg-[#262B3C] dark:border-gray-500 bg-white border-4 border-white rounded-lg p-8 w-[500px] min-h-[400px] flex items-stretch justify-between flex-col;
+
+  .rowModal {
+    @apply flex items-center justify-around;
+  }
+
+  .titleModal {
+    @apply text-[2.5em] font-bold text-center;
+  }
+  .subTitleModal {
+    @apply text-[1.2em] font-medium;
+  }
+  .infoRules {
+    @apply mt-5;
+    p {
+      @apply mb-2;
+    }
+  }
+  .infoFinal {
+    @apply text-center;
+  }
+  .statistic {
+    @apply text-center;
+    span {
+      @apply text-[2em] font-bold;
+    }
+    .playsGame {
+      @apply text-xl font-normal;
+    }
+  }
+  .timerWord {
+    @apply text-center;
+    h5 {
+      @apply uppercase tracking-wider font-medium;
+    }
+    h6 {
+      @apply font-bold text-[1.3em];
+    }
+  }
+  .buttonModal {
+    @apply mt-6 bg-buttonModal text-[1.3em] text-white font-semibold py-2 px-4 rounded w-[263px] self-center tracking-wide;
+  }
+
+  .gridSquare {
+    @apply grid grid-cols-5 gap-2 mt-6 mb-2;
+    .square {
+      @apply w-[80px] h-[80px] dark:bg-blackSquare dark:text-white bg-white rounded-lg flex items-center justify-center text-[2em] font-bold text-black border-2 border-black;
+      &.correct {
+        @apply bg-green-600 border-green-600;
+      }
+      &.present {
+        @apply bg-yellow-500 border-yellow-500;
+      }
+      &.incorrect {
+        @apply bg-gray-400 border-gray-400;
+      }
+    }
+  }
+}

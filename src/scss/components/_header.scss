@@ -1,0 +1,21 @@
+.header {
+  @apply dark:bg-bgBlackSquare bg-slate-100 py-3 px-3 mb-5 rounded-lg;
+  .rowHeader {
+    @apply flex flex-wrap justify-between items-center;
+  }
+  .rowCol {
+    @apply flex flex-wrap justify-between items-center;
+  }
+  .title {
+    @apply text-3xl font-semibold uppercase dark:text-gray-200 text-black tracking-wide;
+  }
+  .toggleButton {
+    @apply relative appearance-none w-[50px] h-[30px] rounded-3xl bg-whiteMode transition-[background] duration-500 outline-none cursor-pointer after:content-[''] after:absolute after:top-[50%] after:left-[30%] after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:rounded-full after:w-[1.25rem] after:h-[1.25rem] after:bg-toggleWhite after:transition-[left] after:duration-500 checked:bg-blackMode checked:after:left-[70%] checked:after:bg-toggleBlack;
+  }
+  .analytics {
+    @apply text-3xl mr-3 dark:text-slate-500 text-gray-600;
+  }
+  .help {
+    @apply text-3xl dark:text-slate-500 text-gray-600;
+  }
+}

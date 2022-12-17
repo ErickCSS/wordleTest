@@ -1,0 +1,22 @@
+.squarePresent {
+  @include square();
+  @apply bg-yellow-300;
+}
+.squareCorrect {
+  @include square();
+  @apply bg-green-600;
+}
+.squareIncorrect {
+  @include square();
+  @apply bg-gray-400;
+}
+
+.squareEmpty {
+  @include square();
+  @apply bg-gray-200 dark:bg-blackSquare;
+}
+
+.squareEdit {
+  @include square();
+  @apply bg-gray-200 dark:bg-blackSquare;
+}

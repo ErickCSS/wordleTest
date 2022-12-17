@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./components/general";
+@import "./components/mixins";
+@import "./components/square";
+@import "./components/mainRow";
+@import "./components/keywords";
+@import "./components/header";
+@import "./components/modal";

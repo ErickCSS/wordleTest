@@ -1,0 +1,7 @@
+.mainWordle {
+  @apply h-screen w-[600px] m-auto flex justify-center flex-col;
+}
+
+.dark {
+  @apply bg-bgBlack text-white;
+}

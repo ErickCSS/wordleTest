@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.mainWordle {
+  @apply h-screen w-[600px] m-auto flex justify-center flex-col;
+}
+
+.dark {
+  @apply bg-bgBlack text-white;
+}
+
+.squarePresent {
+  @apply text-2xl font-bold uppercase w-[70px] h-[70px] border-2 border-transparent flex items-center justify-center rounded-[5px];
+  @apply bg-yellow-300;
+}
+
+.squareCorrect {
+  @apply text-2xl font-bold uppercase w-[70px] h-[70px] border-2 border-transparent flex items-center justify-center rounded-[5px];
+  @apply bg-green-600;
+}
+
+.squareIncorrect {
+  @apply text-2xl font-bold uppercase w-[70px] h-[70px] border-2 border-transparent flex items-center justify-center rounded-[5px];
+  @apply bg-gray-400;
+}
+
+.squareEmpty {
+  @apply text-2xl font-bold uppercase w-[70px] h-[70px] border-2 border-transparent flex items-center justify-center rounded-[5px];
+  @apply bg-gray-200 dark:bg-blackSquare;
+}
+
+.squareEdit {
+  @apply text-2xl font-bold uppercase w-[70px] h-[70px] border-2 border-transparent flex items-center justify-center rounded-[5px];
+  @apply bg-gray-200 dark:bg-blackSquare;
+}
+
+.mainRow {
+  @apply container flex gap-3 justify-center mb-3;
+}
+
+.qwertyContainer {
+  @apply flex flex-wrap w-[620px] mx-auto mt-7 gap-[5px] dark:bg-bgBlackSquare bg-gray-100 p-7 rounded-lg;
+}
+
+.qwertyKey {
+  @apply dark:bg-bgKeyBlack bg-gray-300 cursor-pointer border-none rounded-md dark:text-gray-100 text-gray-700 font-medium flex items-center justify-center;
+  @apply w-[50px] h-[55px];
+}
+
+.emptyKey {
+  @apply w-[25px] h-[55px] flex items-center justify-center;
+}
+
+.enterKey {
+  @apply dark:bg-bgKeyBlack bg-gray-300 cursor-pointer border-none rounded-md dark:text-gray-100 text-gray-700 font-medium flex items-center justify-center;
+  @apply w-[80px] h-[55px];
+}
+
+.deleteKey {
+  @apply dark:bg-bgKeyBlack bg-gray-300 cursor-pointer border-none rounded-md dark:text-gray-100 text-gray-700 font-medium flex items-center justify-center;
+  @apply w-[80px] h-[55px];
+}
+
+.correct {
+  @apply bg-green-600 border-2 border-green-600 text-black;
+}
+
+.present {
+  @apply bg-yellow-300 border-2 border-yellow-300 text-black;
+}
+
+.incorrect {
+  @apply bg-gray-400 border-2 border-gray-400 text-black;
+}
+
+.header {
+  @apply dark:bg-bgBlackSquare bg-slate-100 py-3 px-3 mb-5 rounded-lg;
+}
+.header .rowHeader {
+  @apply flex flex-wrap justify-between items-center;
+}
+.header .rowCol {
+  @apply flex flex-wrap justify-between items-center;
+}
+.header .title {
+  @apply text-3xl font-semibold uppercase dark:text-gray-200 text-black tracking-wide;
+}
+.header .toggleButton {
+  @apply relative appearance-none w-[50px] h-[30px] rounded-3xl bg-whiteMode transition-[background] duration-500 outline-none cursor-pointer after:content-[""] after:absolute after:top-[50%] after:left-[30%] after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:rounded-full after:w-[1.25rem] after:h-[1.25rem] after:bg-toggleWhite after:transition-[left] after:duration-500 checked:bg-blackMode checked:after:left-[70%] checked:after:bg-toggleBlack;
+}
+.header .analytics {
+  @apply text-3xl mr-3 dark:text-slate-500 text-gray-600;
+}
+.header .help {
+  @apply text-3xl dark:text-slate-500 text-gray-600;
+}
+
+.containerModal {
+  @apply w-full h-full fixed left-0 top-0 bg-black bg-opacity-50 flex items-center justify-center;
+}
+
+.hide {
+  @apply invisible;
+}
+
+.show {
+  @apply visible;
+}
+
+.modal {
+  @apply dark:bg-[#262B3C] dark:border-gray-500 bg-white border-4 border-white rounded-lg p-8 w-[500px] min-h-[400px] flex items-stretch justify-between flex-col;
+}
+.modal .rowModal {
+  @apply flex items-center justify-around;
+}
+.modal .titleModal {
+  @apply text-[2.5em] font-bold text-center;
+}
+.modal .subTitleModal {
+  @apply text-[1.2em] font-medium;
+}
+.modal .infoRules {
+  @apply mt-5;
+}
+.modal .infoRules p {
+  @apply mb-2;
+}
+.modal .infoFinal {
+  @apply text-center;
+}
+.modal .statistic {
+  @apply text-center;
+}
+.modal .statistic span {
+  @apply text-[2em] font-bold;
+}
+.modal .statistic .playsGame {
+  @apply text-xl font-normal;
+}
+.modal .timerWord {
+  @apply text-center;
+}
+.modal .timerWord h5 {
+  @apply uppercase tracking-wider font-medium;
+}
+.modal .timerWord h6 {
+  @apply font-bold text-[1.3em];
+}
+.modal .buttonModal {
+  @apply mt-6 bg-buttonModal text-[1.3em] text-white font-semibold py-2 px-4 rounded w-[263px] self-center tracking-wide;
+}
+.modal .gridSquare {
+  @apply grid grid-cols-5 gap-2 mt-6 mb-2;
+}
+.modal .gridSquare .square {
+  @apply w-[80px] h-[80px] dark:bg-blackSquare dark:text-white bg-white rounded-lg flex items-center justify-center text-[2em] font-bold text-black border-2 border-black;
+}
+.modal .gridSquare .square.correct {
+  @apply bg-green-600 border-green-600;
+}
+.modal .gridSquare .square.present {
+  @apply bg-yellow-500 border-yellow-500;
+}
+.modal .gridSquare .square.incorrect {
+  @apply bg-gray-400 border-gray-400;
+}/*# sourceMappingURL=App.css.map */

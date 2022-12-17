@@ -1,0 +1,32 @@
+.qwertyContainer {
+  @apply flex flex-wrap w-[620px] mx-auto mt-7 gap-[5px] dark:bg-bgBlackSquare bg-gray-100 p-7 rounded-lg;
+}
+.qwertyKey {
+  @include keyBase();
+  @apply w-[50px] h-[55px];
+}
+.emptyKey {
+  @apply w-[25px] h-[55px] flex items-center justify-center;
+}
+
+.enterKey {
+  @include keyBase();
+  @apply w-[80px] h-[55px];
+}
+
+.deleteKey {
+  @include keyBase();
+  @apply w-[80px] h-[55px];
+}
+
+.correct {
+  @apply bg-green-600 border-2 border-green-600 text-black;
+}
+
+.present {
+  @apply bg-yellow-300 border-2 border-yellow-300 text-black;
+}
+
+.incorrect {
+  @apply bg-gray-400 border-2 border-gray-400 text-black;
+}
